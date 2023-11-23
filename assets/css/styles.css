@@ -1,0 +1,307 @@
+
+*{
+    margin: 0;
+    padding: 0; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease-in-out;
+}
+
+#loading-screen h1{
+    font-family: 'Andreas';
+    font-size: 30px;
+    color: #F4DFC8;
+    letter-spacing: 2px;
+}
+
+@font-face {
+    font-family: 'Catcheye';
+    src: url(../fonts/Catchye.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Andreas';
+    src: url(../fonts/Andreas.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArsenicaMedium';
+    src: url(../fonts/ArsenicaTrial-Medium.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArsenicaRegular';
+    src: url(../fonts/ArsenicaTrial-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url(../fonts/CaviarDreams.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.videobackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.videobackground video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+#content{
+    opacity: 0;
+    margin: 2%;
+    border: #7e7e7e98 solid 2px;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible{
+    opacity: 1;
+}
+
+.hidden{
+    pointer-events: none;
+    opacity: 0;
+}
+
+body{
+    background-color: #14131c;
+}
+
+header {
+    height: 100%;
+    width: 100%;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 2%;
+    justify-content: center;
+}
+
+header nav ul li{
+    font-size: 20px;
+    font-weight: 200;
+    margin: 1% 3%;
+    transition: all 0.3s ease-in-out;  
+}
+
+header nav ul li:hover{
+    transform: scale(1.1);
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #f4eae0b8;
+    font-family: 'CaviarDreams';
+    /* cursor: url(../cursor/cursor.png), auto; */
+    transition: all 0.3s ease-in-out;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 23%;
+}
+
+main h1{
+    font-family: 'Catcheye';
+    font-weight: 100;
+    font-size: 50px;
+    color: #F4EAE0;
+    padding-left: 4%;
+    letter-spacing: 4px;
+    padding-top: 6%;
+}
+
+main h2{
+    font-family: 'CaviarDreams';
+    font-size: 16px;
+    color: #F4EAE0;
+    padding-top: 1%;
+    padding-left: 4%;
+}
+
+
+.conocimiento {
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    color: #fff;
+    padding-top: 10%;
+    padding: 4%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.conocimiento h4{
+    display: flex;
+    flex-direction: column;
+    font-family: 'CaviarDreams';
+    font-size: 16px;
+    color: #F4EAE0;
+    padding-top: 2%;
+    padding-right: 3%;
+    text-align: center;
+}
+
+#kn{
+    margin: 0 10px;
+}
+
+.opaque{
+    opacity: 0.35;
+}
+
+
+.proyectos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2%;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    padding-left: 10%;
+}
+
+.column{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    transition: all 0.3s ease-in-out;
+    width: 60%;
+    grid-template-rows: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+    opacity: 0.8;
+}
+
+.card img:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    filter: contrast(1.15);
+}
+
+.cardcontent{
+    padding-top: 2%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cardcontent a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'CaviarDreams';
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+}
+
+.cardcontent h6{
+    font-family: 'CaviarDreams';
+    font-size: 14px;
+    font-weight: 100;
+    color: #ffffff;
+    padding-top: 2%;
+
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.contacto h2{
+    font-family: 'Catcheye';
+    font-weight: 500;
+    font-size: 50px;
+    color: #F4EAE0;
+    letter-spacing: 6px;
+    padding-top: 1%;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.logos a{
+    opacity: 0.7;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    padding: 2%;
+    margin: 0 25%;
+    transition: all 0.3s ease-in-out;
+}
+
+.logos a:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
